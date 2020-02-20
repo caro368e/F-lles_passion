@@ -97,10 +97,10 @@ html {
 
 .nav_links {
     position: absolute;
-    right: 0px;
-    height: 70vh;
-    top: 6vh;
-    background-color: #4c78be;
+    right: 0v;
+    height: 60vh;
+    top: -2vh;
+    background: rgba(15, 15, 15, 0.9);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,8 +112,11 @@ html {
 .nav_links button {
     padding-top: 0;
     margin: 0;
-    margin: 2em;
-    font-size: 1em;
+    margin: 1.4em;
+    font-size: 0.4em;
+    background-color: transparent;
+    border: none;
+    color: #fff;
 }
 
 .burger {
@@ -141,7 +144,40 @@ html {
 
 @media screen and (min-width:600px) {
 
-    * {}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #desktop_nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    #desktop_nav button {
+        margin: 1em;
+        margin-top: 4em;
+        padding-right: 1em;
+        font-family: 'Roboto', sans-serif;
+        background-color: transparent;
+        border: none;
+        font-size: 1em;
+        cursor: pointer;
+        color: #fff;
+        letter-spacing: 0.2em;
+    }
+
+    #desktop_nav button:hover {
+        color: #b1799b;
+        transition: 0.2s;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .desktop_nav {}
 
     h1,
     h2,
@@ -155,6 +191,7 @@ html {
 
     .header_overskrift {
         padding-bottom: 0.3em;
+        letter-spacing: 0.4em;
     }
 
     #kategori_overskrift {
@@ -188,10 +225,11 @@ html {
     }
 
     #showcase {
-        background-image: url(japan_img/header.jpg);
+        background-image: url(japan_img/header_desktop.jpg);
         background-size: cover;
         width: 100vw;
         height: 10vw;
+        position: relative;
     }
 
     #showcase_container {
@@ -200,10 +238,9 @@ html {
         height: 10vw;
         color: #fff;
         display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
+        justify-content: flex-end;
         align-items: flex-end;
-        font-size: 3em;
+        font-size: 7em;
         letter-spacing: 0.1em;
         padding-left: 0.2em;
 
