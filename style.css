@@ -190,8 +190,7 @@ html {
     }
 
     .header_overskrift {
-        padding-bottom: 0.3em;
-        letter-spacing: 0.4em;
+        display: none;
     }
 
     #kategori_overskrift {
@@ -228,14 +227,14 @@ html {
         background-image: url(japan_img/header_desktop.jpg);
         background-size: cover;
         width: 100vw;
-        height: 10vw;
+        height: 15vw;
         position: relative;
     }
 
     #showcase_container {
         background: rgba(15, 15, 15, 0.65);
         width: 100vw;
-        height: 10vw;
+        height: 15vw;
         color: #fff;
         display: flex;
         justify-content: flex-end;
@@ -247,7 +246,10 @@ html {
     }
 
     #showcase_container .logo {
-        display: none;
+        display: block;
+        width: 150px;
+        align-self: flex-start;
+
     }
 
 
