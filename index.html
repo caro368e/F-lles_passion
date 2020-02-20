@@ -7,24 +7,42 @@
     <meta name="robots" content="noindex">
     <title>Japan Street Fashion</title>
     <link rel="stylesheet" href="style.css">
+
+    <!--Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Taviraj&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header id="showcase">
         <div id="showcase_container">
-            <h2>Japan Street Fashion</h2>
+            <img class="logo" src="japan_img/japanlogo.svg" alt="logo">
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <h1 class="header_overskrift">Japan Street Fashion</h1>
         </div>
     </header>
 
-    <h1>Alle</h1>
+    <div id="kategori_overskrift">
+        <div class="kategori_indhold">
+            <h1>Alle</h1>
+        </div>
+    </div>
 
-    <nav>
+
+    <nav id="desktop_nav" class="nav_links">
+
         <button class="filter valgt" data-substil="alle">Alle </button>
         <button class="filter" data-substil="lolita">Lolita</button>
         <button class="filter" data-substil="visual_kei">Visual Kei</button>
         <button class="filter" data-substil="gyaru">Gyaru</button>
         <button class="filter" data-substil="traditionel">Traditional</button>
+
 
         <section id="data_container">
             <template>
@@ -36,10 +54,10 @@
                     <p class="lang"></p>
                     <p class="udseende"></p>
                 </article>
-            </template> </section>
+            </template>
+        </section>
+
     </nav>
     <script src="script.js">
     </script>
-</body>
-
-</html>
+</body></html>

@@ -1,7 +1,42 @@
 //*********** GENERELT ************//
 
-* {
-    box-sizing: border-box;
+/*font-family: 'Taviraj', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+* {}
+
+h1,
+h2,
+h3 {
+    font-family: 'Taviraj', serif;
+    font-size: 0.3em;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header_overskrift {
+    padding-bottom: 0.3em;
+}
+
+#kategori_overskrift {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 6em;
+    color: #fff;
+    margin-top: 0.3em;
+    padding: 0;
+
+}
+
+#kategori_overskrift .kategori_indhold {
+    border-bottom: 0.1px solid #fff;
+    width: 300px;
+    padding: 0;
+    margin: 0;
 }
 
 img {
@@ -10,17 +45,201 @@ img {
 
 body {
     margin: 0;
-}
-
-h1 {
-    font-family: 'Taviraj', serif;
-}
-
-p {
     font-family: 'Roboto', sans-serif;
+    background-color: #361b27;
+
+}
+
+#showcase {
+    background-image: url(japan_img/header.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 30vw;
+}
+
+#showcase_container {
+    background: rgba(15, 15, 15, 0.65);
+    width: 100vw;
+    height: 30vw;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    padding-left: 0.2em;
+
+}
+
+#showcase_container .logo {
+    display: none;
 }
 
 
+
+/*----------------Burger menu -----------------*/
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+
+.nav-active {
+    transform: translateY(0%);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.nav_links {
+    position: absolute;
+    right: 0px;
+    height: 70vh;
+    top: 6vh;
+    background-color: #4c78be;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    transform: translateY(-180%);
+}
+
+.nav_links button {
+    padding-top: 0;
+    margin: 0;
+    margin: 2em;
+    font-size: 1em;
+}
+
+.burger {
+    display: block;
+    align-self: flex-start;
+    padding-right: 0.3em;
+    padding-top: 0.1em;
+    background-color: #000;
+    z-index: 2;
+}
+
+
+.nav-active {
+    transform: translateY(0%);
+}
+
+#desktop_nav {
+    display: none;
+}
+
+
+@media screen and (min-width:600px) {
+
+    * {}
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Taviraj', serif;
+        font-size: 0.3em;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .header_overskrift {
+        padding-bottom: 0.3em;
+    }
+
+    #kategori_overskrift {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 6em;
+        color: #fff;
+        margin-top: 0.3em;
+        padding: 0;
+
+    }
+
+    #kategori_overskrift .kategori_indhold {
+        border-bottom: 0.1px solid #fff;
+        width: 300px;
+        padding: 0;
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #361b27;
+
+    }
+
+    #showcase {
+        background-image: url(japan_img/header.jpg);
+        background-size: cover;
+        width: 100vw;
+        height: 10vw;
+    }
+
+    #showcase_container {
+        background: rgba(15, 15, 15, 0.65);
+        width: 100vw;
+        height: 10vw;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        font-size: 3em;
+        letter-spacing: 0.1em;
+        padding-left: 0.2em;
+
+    }
+
+    #showcase_container .logo {
+        display: none;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------KEYFRAMES--------------------------*/
+
+.drop {
+    animation-name: drop_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes drop_kf {
+    from {
+        transform: translateY(-130vw);
+    }
+
+    to {
+        transform: translateY(2vw);
+    }
+}
 
 
 
