@@ -47,7 +47,6 @@ function visStil() {
             //forkorter lang string så man klikker for at læse mere
             let str = stil.gsx$lang.$t;
             let cut = str.slice(0, 45) + " [...]";
-            console.log(res);
             klon.querySelector(".lang").textContent = cut;
 
 
