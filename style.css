@@ -81,13 +81,14 @@ body {
 
 #data_container img {
     width: 100%;
-    margin-top: +2em;
+    margin-top: 2em;
 }
 
 #data_container p {
     color: #fff;
-    margin-left: 1em;
+    margin: 1em;
 }
+
 
 
 
@@ -190,7 +191,22 @@ html {
         display: none;
     }
 
-    .desktop_nav {}
+    #data_container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 2em;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        cursor: pointer;
+        color: #fff;
+        grid-gap: 80px;
+        background-color: #211017;
+        cursor: auto;
+    }
+
+    .oversigt img {
+        border-radius: 5px;
+    }
 
     h1,
     h2,
