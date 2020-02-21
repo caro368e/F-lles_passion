@@ -156,6 +156,48 @@ html {
 }
 
 
+/*------------- Singleview Mobil -------------*/
+
+.stil_view {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+
+.stil_view img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.stil_view p {
+    text-align: start;
+    color: #fff;
+    padding: 1em;
+}
+
+.stil_view h3 {
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.stil_view button {
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 1em;
+    color: #fff;
+    align-self: flex-end;
+    border: none;
+    margin: 0.6em;
+
+}
+
+
+
 @media screen and (min-width:600px) {
 
     * {
