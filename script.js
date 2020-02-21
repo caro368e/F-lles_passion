@@ -44,9 +44,16 @@ function visStil() {
         if (filter == "alle" || filter == stil.gsx$kategori.$t) {
             let klon = stilTemplate.cloneNode(true).content;
 
+            //forkorter lang string så man klikker for at læse mere
+            let str = stil.gsx$lang.$t;
+            let cut = str.slice(0, 45) + " [...]";
+            console.log(res);
+            klon.querySelector(".lang").textContent = cut;
+
+
             klon.querySelector(".navn").textContent = stil.gsx$navn.$t;
-            klon.querySelector(".lang").textContent = stil.gsx$lang.$t;
-            klon.querySelector(".udseende").textContent = stil.gsx$udseende.$t;
+            //klon.querySelector(".lang").textContent = stil.gsx$lang.$t;
+            //klon.querySelector(".udseende").textContent = stil.gsx$udseende.$t;
             klon.querySelector("img").src = "japan_img/imgs/" + stil.gsx$billede.$t + ".jpg";
             klon.querySelector("img").alt = "billede af " + stil.gsx$navn.$t;
 
