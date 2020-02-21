@@ -4,7 +4,11 @@
 font-family: 'Roboto', sans-serif;
 */
 
-* {}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 h1,
 h2,
@@ -200,11 +204,6 @@ html {
 
 @media screen and (min-width:600px) {
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
 
     #desktop_nav {
         display: flex;
