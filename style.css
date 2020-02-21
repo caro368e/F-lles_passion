@@ -202,6 +202,8 @@ html {
 
 
 
+
+
 @media screen and (min-width:600px) {
 
 
@@ -318,8 +320,9 @@ html {
 
     #showcase_container .logo {
         display: block;
-        width: 150px;
+        width: 130px;
         align-self: flex-start;
+        margin: 10px 0 0 10px;
     }
 
 
@@ -371,6 +374,16 @@ html {
         transition: 0.2s;
     }
 
+}
+
+@media screen and (min-width:1173px) {
+
+    #showcase_container .logo {
+        display: block;
+        width: 180px;
+        align-self: flex-start;
+        margin: 10px 0 0 10px;
+    }
 }
 
 
