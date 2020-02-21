@@ -15,30 +15,69 @@
 
 <body>
 
-    <section id="detalje">
-
-        <article class="stil_view">
-            <button>X</button>
-            <img src="" alt="">
-            <h3 class="navn"></h3>
-            <p class="kategori"></p>
-            <p class="lang"></p>
-            <p class="udseende"></p>
-        </article>
-
-
-    </section>
-
     <header id="showcase">
         <div id="showcase_container">
             <h2>Japan Street Fashion</h2>
         </div>
     </header>
 
+    <section id="detail">
+        <article class="stil_view">
+            <button id="luk">X</button>
+            <img src="" alt="">
+            <h3 class="navn"></h3>
+            <p class="lang"></p>
+            <p class="udseende"></p>
+        </article>
+    </section>
 
 
 
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
 
+        let alleStile = [];
+        const endpoint = "https://spreadsheets.google.com/feeds/list/1vOHWbUA6Mg-QQ3r0N3PpWGCtvbjTYtFPFhHHuhAcEUs/od6/public/values?alt=json";
+        let filter = "alle";
+        const detail = document.querySelector("#detail");
 
-    <script src="script.js"></script>
-</body></html>
+        document.addEventListener("DOMContentLoaded", start);
+        console.log("load");
+
+        function start() {
+            console.log("start");
+            hentData();
+        }
+
+        async function hentData() {
+            console.log("hentData");
+            const response = await fetch(endpoint);
+            alleStile = await response.json();
+            visStil();
+        }
+
+        function visStil() {
+            alleStile.feed.entry.forEach(stil => {
+                if (stil.gsx$id.$t == id) {
+
+                    detail.querySelector("h3").textContent = stil.gsx$navn.$t;
+                    detail.querySelector("img").src = "japan_img/imgs/" + stil.gsx$billede.$t + ".jpg";
+                    detail.querySelector("img").alt = "billede af " + stil.gsx$navn.$t;
+                    detail.querySelector(".lang").textContent = stil.gsx$lang.$t;
+                    detail.querySelector(".udseende").textContent = stil.gsx$udseende.$t;
+
+                    detail.querySelector("#luk").addEventListener("click", () => {
+                        history.back();
+                    });
+
+                }
+
+            })
+
+        }
+
+    </script>
+</body>
+
+</html>
