@@ -39,10 +39,6 @@ h3 {
     margin: 0;
 }
 
-img {
-    width: 100%;
-}
-
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -74,6 +70,23 @@ body {
 
 #showcase_container .logo {
     display: none;
+}
+
+#data_container h3 {
+    font-family: 'Taviraj', serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: #fff;
+}
+
+#data_container img {
+    width: 100%;
+    margin-top: +2em;
+}
+
+#data_container p {
+    color: #fff;
+    margin-left: 1em;
 }
 
 
