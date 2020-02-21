@@ -30,14 +30,14 @@ h3 {
     align-items: center;
     text-align: center;
     font-size: 6em;
-    color: #fff;
+    color: #bfbfbf;
     margin-top: 0.3em;
     padding: 0;
 
 }
 
 #kategori_overskrift .kategori_indhold {
-    border-bottom: 0.1px solid #fff;
+    border-bottom: 0.1px solid #bfbfbf;
     width: 300px;
     padding: 0;
     margin: 0;
@@ -58,7 +58,7 @@ body {
 }
 
 #showcase_container {
-    background: rgba(15, 15, 15, 0.65);
+    background: rgba(0, 0, 0, 0.53);
     width: 100vw;
     height: 30vw;
     color: #fff;
@@ -92,7 +92,7 @@ body {
     font-family: 'Taviraj', serif;
     font-size: 1.5em;
     text-align: center;
-    color: #fff;
+    color: #bfbfbf;
 }
 
 #data_container img {
@@ -101,7 +101,7 @@ body {
 }
 
 #data_container p {
-    color: #fff;
+    color: #bfbfbf;
     margin: 1em;
 }
 
@@ -143,7 +143,7 @@ html {
     font-size: 0.4em;
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: #bfbfbf;
 }
 
 .burger {
@@ -177,6 +177,7 @@ html {
     flex-direction: column;
     align-items: center;
     align-content: center;
+    background-color: #36272e;
 }
 
 
@@ -187,13 +188,13 @@ html {
 
 .stil_view p {
     text-align: start;
-    color: #fff;
+    color: #bfbfbf;
     padding: 1em;
 }
 
 .stil_view h3 {
     font-size: 1.5em;
-    color: #fff;
+    color: #bfbfbf;
     text-align: center;
     margin-top: 1em;
 }
@@ -202,7 +203,7 @@ html {
     text-decoration: none;
     background-color: transparent;
     font-size: 1em;
-    color: #fff;
+    color: #bfbfbf;
     align-self: flex-end;
     border: none;
     margin: 0.6em;
@@ -229,7 +230,7 @@ html {
         border: none;
         font-size: 1em;
         cursor: pointer;
-        color: #fff;
+        color: #bfbfbf;
         letter-spacing: 0.2em;
     }
 
@@ -249,9 +250,9 @@ html {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         cursor: pointer;
-        color: #fff;
+        color: #bfbfbf;
         grid-gap: 20px 80px;
-        background-color: #211017;
+        background-color: #36272e;
         cursor: auto;
     }
 
@@ -279,7 +280,7 @@ html {
         align-items: center;
         text-align: center;
         font-size: 6em;
-        color: #fff;
+        color: #bfbfbf;
         margin-top: 0.3em;
         padding: 0;
 
@@ -300,7 +301,7 @@ html {
     body {
         margin: 0;
         font-family: 'Roboto', sans-serif;
-        background-color: #361b27;
+        background-color: #482c38;
 
     }
 
@@ -342,7 +343,7 @@ html {
 
     section {
         max-width: 1300px;
-        background-color: #211017;
+        background-color: #482c38;
         margin: 0 auto;
     }
 
@@ -354,6 +355,7 @@ html {
         align-items: center;
         align-content: center;
         padding: 2em;
+
     }
 
     .stil_view img {
@@ -363,19 +365,19 @@ html {
 
     .stil_view p {
         text-align: start;
-        color: #fff;
+        color: #bfbfbf;
     }
 
     .stil_view h3 {
         font-size: 3em;
-        color: #fff;
+        color: #bfbfbf;
     }
 
     .stil_view button {
         text-decoration: none;
         background-color: transparent;
         font-size: 1em;
-        color: #fff;
+        color: #bfbfbf;
         align-self: flex-start;
         border: none;
         cursor: pointer;
