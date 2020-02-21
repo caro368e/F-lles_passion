@@ -72,8 +72,20 @@ body {
 
 }
 
+#showcase_container .logo_div {
+    display: flex;
+    flex-direction: column;
+}
+
 #showcase_container .logo {
+    width: 100px;
+    margin: 0 10px;
+    cursor: auto;
+}
+
+#showcase_container .logo2 {
     display: none;
+    cursor: auto;
 }
 
 #data_container h3 {
@@ -92,9 +104,6 @@ body {
     color: #fff;
     margin: 1em;
 }
-
-
-
 
 /*----------------Burger menu -----------------*/
 .burger div {
@@ -203,7 +212,6 @@ html {
 
 
 
-
 @media screen and (min-width:600px) {
 
 
@@ -242,7 +250,7 @@ html {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         cursor: pointer;
         color: #fff;
-        grid-gap: 80px;
+        grid-gap: 20px 80px;
         background-color: #211017;
         cursor: auto;
     }
@@ -300,14 +308,14 @@ html {
         background-image: url(japan_img/header_desktop.jpg);
         background-size: cover;
         width: 100vw;
-        height: 15vw;
+        height: 25vw;
         position: relative;
     }
 
     #showcase_container {
         background: rgba(15, 15, 15, 0.65);
         width: 100vw;
-        height: 15vw;
+        height: 25vw;
         color: #fff;
         display: flex;
         justify-content: flex-end;
@@ -319,10 +327,14 @@ html {
     }
 
     #showcase_container .logo {
+        display: none;
+    }
+
+    #showcase_container .logo2 {
         display: block;
-        width: 130px;
+        width: 145px;
         align-self: flex-start;
-        margin: 10px 0 0 10px;
+        margin: 10px 0 13px 10px
     }
 
 
@@ -376,14 +388,33 @@ html {
 
 }
 
-@media screen and (min-width:1173px) {
+@media screen and (min-width:900px) {
 
-    #showcase_container .logo {
-        display: block;
-        width: 180px;
+    #showcase_container .logo2 {
+        width: 230px;
         align-self: flex-start;
         margin: 10px 0 0 10px;
     }
+}
+
+@media screen and (min-width:1173px) {
+
+    #showcase_container .logo2 {
+        width: 280px;
+        align-self: flex-start;
+        margin: 10px 0 35px 10px;
+    }
+
+    #showcase {
+        height: 18vw;
+    }
+
+    #showcase_container {
+        height: 18vw;
+    }
+
+
+
 }
 
 
