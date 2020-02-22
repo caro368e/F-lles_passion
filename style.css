@@ -101,6 +101,31 @@ h3 {
     margin: 1em;
 }
 
+/*-------------------FOOTER----------------------*/
+
+footer {
+    background-color: #1c1418;
+    display: flex;
+}
+
+footer p {
+    color: #ffff;
+    margin: 0;
+    line-height: 2em;
+}
+
+footer .navn_footer {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 2.5em;
+}
+
+footer .info_footer {
+    flex-grow: 1;
+    flex-basis: 500px;
+    margin: 2.5em;
+}
+
 /*----------------  BURGER MENU -----------------*/
 .burger div {
     width: 25px;
