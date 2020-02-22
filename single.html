@@ -62,6 +62,7 @@
             visStil();
         }
 
+        //funktion som viser stilen for sig selv
         function visStil() {
             alleStile.feed.entry.forEach(stil => {
                 if (stil.gsx$id.$t == id) {
@@ -75,11 +76,11 @@
                     detail.querySelector("#luk").addEventListener("click", () => {
                         history.back();
                     });
-
                 }
-
             })
-
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
