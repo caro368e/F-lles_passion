@@ -33,6 +33,7 @@
             <h3 class="navn"></h3>
             <p class="lang"></p>
             <p class="udseende"></p>
+            <p class="kultur"></p>
         </article>
     </section>
 
@@ -72,6 +73,7 @@
                     detail.querySelector("img").alt = "billede af " + stil.gsx$navn.$t;
                     detail.querySelector(".lang").textContent = stil.gsx$lang.$t;
                     detail.querySelector(".udseende").textContent = stil.gsx$udseende.$t;
+                    detail.querySelector(".kultur").textContent = stil.gsx$kultur.$t;
 
                     detail.querySelector("#luk").addEventListener("click", () => {
                         history.back();
