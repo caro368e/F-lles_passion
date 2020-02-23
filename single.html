@@ -33,10 +33,18 @@
             <h3 class="navn"></h3>
             <p class="lang"></p>
             <p class="udseende"></p>
+            <p class="kultur"></p>
         </article>
     </section>
 
-
+    <footer>
+        <div class="navn_footer">
+            <p>Iana Christiansen<br>Caroline I. G. Jensen<br>Sascha Brouer</p>
+        </div>
+        <div class="info_footer">
+            <p>2. semester multimedie design<br>KEA - Københavns Erhvervsakademi</p>
+        </div>
+    </footer>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -72,6 +80,7 @@
                     detail.querySelector("img").alt = "billede af " + stil.gsx$navn.$t;
                     detail.querySelector(".lang").textContent = stil.gsx$lang.$t;
                     detail.querySelector(".udseende").textContent = stil.gsx$udseende.$t;
+                    detail.querySelector(".kultur").textContent = stil.gsx$kultur.$t;
 
                     detail.querySelector("#luk").addEventListener("click", () => {
                         history.back();
