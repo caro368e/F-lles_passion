@@ -17,6 +17,18 @@
 
     <header id="showcase">
         <div id="showcase_container">
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div id="burger_list" class="hidden nav_links">
+                <button class="filter valgt" data-substil="alle">Alle </button>
+                <button class="filter" data-substil="lolita">Lolita</button>
+                <button class="filter" data-substil="visual_kei">Visual Kei</button>
+                <button class="filter" data-substil="gyaru">Gyaru</button>
+                <button class="filter" data-substil="traditionel">Traditionel</button>
+            </div>
             <div class="logo_div">
                 <a href="index.html"><img class="logo" src="japan_img/japanlogov2.svg" alt="logo"></a>
                 <a href="index.html"><img class="logo2" src="japan_img/japanlogo.svg" alt="logo"></a>
@@ -47,6 +59,22 @@
     </footer>
 
     <script>
+        window.addEventListener("load", navShow);
+
+
+        function navShow() {
+            console.log("navShow");
+            document.querySelector(".burger").addEventListener("click", burgerClick);
+        }
+
+        function burgerClick() {
+            console.log("burgerClick");
+            document.querySelector(".nav_links").classList.toggle("nav-active");
+            document.querySelector(".nav_links").classList.toggle("drop");
+            document.querySelector("#burger_list").classList.toggle("hidden");
+        }
+
+
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
 
