@@ -312,13 +312,15 @@ footer .info_footer {
 
     #showcase_container .logo {
         display: none;
+        cursor: pointer;
     }
 
     #showcase_container .logo2 {
         display: block;
         width: 145px;
         align-self: flex-start;
-        margin: 10px 0 13px 10px
+        margin: 10px 0 13px 10px;
+        cursor: pointer;
     }
 
 
