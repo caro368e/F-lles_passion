@@ -25,6 +25,16 @@ h3 {
     padding: 0;
 }
 
+#luk {
+    color: #c7c6c6;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+
+#luk:hover {
+    color: #F57b99;
+}
+
 .header_overskrift {
     padding-bottom: 0.3em;
 }
@@ -134,26 +144,42 @@ h3 {
 /*-------------------FOOTER----------------------*/
 
 footer {
-    background-color: #36272e;
-    display: flex;
+    background-color: #413141ff;
+    width: 100%;
+    bottom: 0;
 }
+
+#footer_div {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
 
 footer p {
     color: #ffff;
-    margin: 0;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 
 footer .navn_footer {
-    flex-grow: 1;
-    flex-basis: 500px;
     margin: 2.5em;
+
 }
 
 footer .info_footer {
-    flex-grow: 1;
-    flex-basis: 500px;
     margin: 2.5em;
+
+}
+
+.so_me {
+    margin: 1em;
+    padding: 1em;
+}
+
+.fab {
+    padding: 0.5em;
+    color: #cbcbcb;
 }
 
 /*----------------  BURGER MENU -----------------*/
@@ -278,12 +304,12 @@ footer .info_footer {
     }
 
     #desktop_nav button:hover {
-        color: #b1799b;
+        color: #F57b99;
         transition: 0.2s;
     }
 
     #desktop_nav .valgt {
-        color: #b1799b;
+        color: #F57b99;
     }
 
     .burger {
