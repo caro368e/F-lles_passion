@@ -84,6 +84,36 @@ h3 {
     cursor: auto;
 }
 
+#showcase_container_2 {
+    background: rgba(0, 0, 0, 0.53);
+    width: 100vw;
+    height: 30vw;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    padding-left: 0.2em;
+}
+
+#showcase_container_2 .logo_div {
+    display: flex;
+    flex-direction: column;
+}
+
+#showcase_container_2 .logo {
+    width: 100px;
+    margin: 0 10px;
+    cursor: auto;
+}
+
+#showcase_container_2 .logo2 {
+    display: none;
+    cursor: auto;
+}
+
 #data_container h3 {
     font-family: 'Taviraj', serif;
     font-size: 1.5em;
@@ -323,6 +353,28 @@ footer .info_footer {
         cursor: pointer;
     }
 
+    #showcase_container_2 {
+        background: rgba(15, 15, 15, 0.65);
+        width: 100vw;
+        height: 25vw;
+        justify-content: flex-start;
+        font-size: 7em;
+    }
+
+    #showcase_container_2 .logo {
+        display: none;
+        cursor: pointer;
+    }
+
+    #showcase_container_2 .logo2 {
+        display: block;
+        width: 145px;
+        align-self: flex-start;
+        margin: 10px 0 13px 10px;
+        cursor: pointer;
+    }
+
+
 
     /*---------------------SINGLEVIEW MEDIA QUERIES-----------------*/
 
@@ -368,21 +420,35 @@ footer .info_footer {
         width: 230px;
         margin: 10px 0 15px 10px;
     }
+
+    #showcase_container_2 .logo2 {
+        width: 230px;
+        margin: 10px 0 15px 10px;
+    }
 }
 
 
 @media screen and (min-width:1173px) {
+
+    #showcase {
+        height: 18vw;
+    }
 
     #showcase_container .logo2 {
         width: 240px;
         margin: 10px 0 -2px 10px;
     }
 
-    #showcase {
+    #showcase_container {
         height: 18vw;
     }
 
-    #showcase_container {
+    #showcase_container_2 .logo2 {
+        width: 240px;
+        margin: 10px 0 -2px 10px;
+    }
+
+    #showcase_container_2 {
         height: 18vw;
     }
 }
@@ -391,6 +457,11 @@ footer .info_footer {
 @media screen and (min-width:1600px) {
 
     #showcase_container .logo2 {
+        width: 280px;
+        margin: 10px 0 35px 10px;
+    }
+
+    #showcase_container_2 .logo2 {
         width: 280px;
         margin: 10px 0 35px 10px;
     }
