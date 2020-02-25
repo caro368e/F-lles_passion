@@ -17,17 +17,18 @@
 
 <body>
 
+    <!-- header med billed og logo, men ingen burgermenu da den kun filtrere og der er ikke brug for en filtrering i singleview -->
     <header id="showcase">
         <div id="showcase_container_2">
             <div class="logo_div">
                 <a href="index.html"><img class="logo" src="japan_img/japanlogov2.svg" alt="logo"></a>
-                <a href="index.html"><img class="logo2" src="japan_img/japanlogo.svg" alt="logo"></a>
+                <a href="index.html"><img class="logo2" src="japan_img/japanlogov3.svg" alt="logo"></a>
                 <h1 class="header_overskrift">Japan Street Fashion</h1>
             </div>
         </div>
-
     </header>
 
+    <!-- strukturen for indholdet som tilføjes med javascript fra google sheet/json -->
     <section id="detail">
         <article class="stil_view">
             <button id="luk">Tilbage</button>
@@ -39,42 +40,32 @@
         </article>
     </section>
 
+    <!-- footer med oplysninger om os + so-me logoer -->
     <footer>
-        <div class="navn_footer">
-            <p>Iana Christiansen<br>Caroline I. G. Jensen<br>Sascha Brouer</p>
-        </div>
-        <div class="info_footer">
-            <p>2. semester multimedie design<br>KEA - Københavns Erhvervsakademi</p>
-        </div>
+        <div id="footer_div">
+            <div class="navn_footer">
+                <p>Iana Christiansen<br>Caroline I. G. Jensen<br>Sascha Brouer</p>
+            </div>
+            <div class="info_footer">
+                <p>2. semester multimedie design<br>KEA - Københavns Erhvervsakademi</p>
+            </div>
 
-        <div class="so_me">
-            <i class="fab fa-instagram"></i>
+            <!-- lånt kode fra font awesome som tilføjer logoer af som-me via et link sat i head -->
+            <div class="so_me">
+                <i class="fab fa-instagram fa-3x"></i>
+                <i class="fab fa-pinterest-square fa-3x"></i>
+            </div>
         </div>
     </footer>
 
     <script>
-        window.addEventListener("load", navShow);
-
-
-        function navShow() {
-            console.log("navShow");
-            document.querySelector(".burger").addEventListener("click", burgerClick);
-        }
-
-        function burgerClick() {
-            console.log("burgerClick");
-            document.querySelector(".nav_links").classList.toggle("nav-active");
-            document.querySelector(".nav_links").classList.toggle("drop");
-            document.querySelector("#burger_list").classList.toggle("hidden");
-        }
-
-
+        //variabler som hentes fra den forrige side
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
 
+        //variabler som danner array og json
         let alleStile = [];
         const endpoint = "https://spreadsheets.google.com/feeds/list/1vOHWbUA6Mg-QQ3r0N3PpWGCtvbjTYtFPFhHHuhAcEUs/od6/public/values?alt=json";
-        let filter = "alle";
         const detail = document.querySelector("#detail");
 
         document.addEventListener("DOMContentLoaded", start);
@@ -85,6 +76,8 @@
             hentData();
         }
 
+
+        //funktion som henter data fra google sheet/json
         async function hentData() {
             console.log("hentData");
             const response = await fetch(endpoint);
@@ -92,7 +85,7 @@
             visStil();
         }
 
-        //funktion som viser stilen for sig selv
+        //funktion som viser stilen for sig selv med mere tekst end forrige side
         function visStil() {
             alleStile.feed.entry.forEach(stil => {
                 if (stil.gsx$id.$t == id) {
@@ -100,10 +93,11 @@
                     detail.querySelector("h3").textContent = stil.gsx$navn.$t;
                     detail.querySelector("img").src = "japan_img/imgs/" + stil.gsx$billede.$t + ".jpg";
                     detail.querySelector("img").alt = "billede af " + stil.gsx$navn.$t;
-                    detail.querySelector(".lang").textContent = stil.gsx$lang.$t;
-                    detail.querySelector(".udseende").textContent = stil.gsx$udseende.$t;
-                    detail.querySelector(".kultur").textContent = stil.gsx$kultur.$t;
+                    detail.querySelector(".lang").innerHTML += `<b>Om stilen: <br></b>${stil.gsx$lang.$t}`;
+                    detail.querySelector(".udseende").innerHTML += `<b>Udseendet: <br></b>${stil.gsx$udseende.$t}`;
+                    detail.querySelector(".kultur").innerHTML += `<b>Kultur-sammenhæng: <br></b>${stil.gsx$kultur.$t}`;;
 
+                    //denne funktion gør at man kan klikke sig tilbage til den forrige side
                     detail.querySelector("#luk").addEventListener("click", () => {
                         history.back();
                     });

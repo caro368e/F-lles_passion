@@ -4,18 +4,20 @@ let filter = "alle";
 
 window.addEventListener("load", navShow);
 
-
+//funktion der tilføjer click til burgermenuen
 function navShow() {
     console.log("navShow");
     document.querySelector(".burger").addEventListener("click", burgerClick);
 }
 
+//funktion som viser de forskellige filtrerings knapper, når man klikker
 function burgerClick() {
     console.log("burgerClick");
     document.querySelector(".nav_links").classList.toggle("nav-active");
     document.querySelector(".nav_links").classList.toggle("drop");
     document.querySelector("#burger_list").classList.toggle("hidden");
 }
+
 
 
 document.addEventListener("DOMContentLoaded", start);
@@ -38,21 +40,22 @@ async function hentData() {
 function visStil() {
     const container = document.querySelector("#data_container");
     const stilTemplate = document.querySelector("template");
+
     container.textContent = "";
 
+    //her tilføjes indhold fra vores google sheet til DOM i form af en array
     alleStile.feed.entry.forEach(stil => {
         if (filter == "alle" || filter == stil.gsx$kategori.$t) {
             let klon = stilTemplate.cloneNode(true).content;
 
-            //forkorter lang string så man klikker for at læse mere
-            let str = stil.gsx$lang.$t;
-            let cut = str.slice(0, 45) + " [...]";
-            klon.querySelector(".lang").textContent = cut;
+            //Dette forkorter lang string så man klikker for at læse mere, men vi ændrede det til at lave en kort tekst i google sheet
+            //let str = stil.gsx$lang.$t;
+            //let cut = str.slice(0, 45) + " [...]";
+            //klon.querySelector(".lang").textContent = cut;
 
 
             klon.querySelector(".navn").textContent = stil.gsx$navn.$t;
-            //klon.querySelector(".lang").textContent = stil.gsx$lang.$t;
-            //klon.querySelector(".udseende").textContent = stil.gsx$udseende.$t;
+            klon.querySelector(".kort").textContent = stil.gsx$kort.$t + " [...]";
             klon.querySelector("img").src = "japan_img/imgs/" + stil.gsx$billede.$t + ".jpg";
             klon.querySelector("img").alt = "billede af " + stil.gsx$navn.$t;
 
@@ -77,7 +80,6 @@ function addListenersToButtons() {
 //funktion som filtrerer
 function filtrering() {
     filter = this.dataset.substil;
-    console.log(filter);
     document.querySelector(".kategori_indhold h1").textContent = this.textContent;
     document.querySelectorAll(".filter").forEach(elm => {
         elm.classList.remove("valgt");
