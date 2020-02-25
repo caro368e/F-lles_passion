@@ -25,6 +25,16 @@ h3 {
     padding: 0;
 }
 
+#luk {
+    color: #c7c6c6;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+
+#luk:hover {
+    color: #F57b99;
+}
+
 .header_overskrift {
     padding-bottom: 0.3em;
 }
@@ -84,6 +94,36 @@ h3 {
     cursor: auto;
 }
 
+#showcase_container_2 {
+    background: rgba(0, 0, 0, 0.53);
+    width: 100vw;
+    height: 30vw;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    padding-left: 0.2em;
+}
+
+#showcase_container_2 .logo_div {
+    display: flex;
+    flex-direction: column;
+}
+
+#showcase_container_2 .logo {
+    width: 100px;
+    margin: 0 10px;
+    cursor: auto;
+}
+
+#showcase_container_2 .logo2 {
+    display: none;
+    cursor: auto;
+}
+
 #data_container h3 {
     font-family: 'Taviraj', serif;
     font-size: 1.5em;
@@ -104,26 +144,42 @@ h3 {
 /*-------------------FOOTER----------------------*/
 
 footer {
-    background-color: #1c1418;
-    display: flex;
+    background-color: #413141ff;
+    width: 100%;
+    bottom: 0;
 }
+
+#footer_div {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
 
 footer p {
     color: #ffff;
-    margin: 0;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 
 footer .navn_footer {
-    flex-grow: 1;
-    flex-basis: 500px;
     margin: 2.5em;
+
 }
 
 footer .info_footer {
-    flex-grow: 1;
-    flex-basis: 500px;
     margin: 2.5em;
+
+}
+
+.so_me {
+    margin: 1em;
+    padding: 1em;
+}
+
+.fab {
+    padding: 0.5em;
+    color: #cbcbcb;
 }
 
 /*----------------  BURGER MENU -----------------*/
@@ -248,12 +304,12 @@ footer .info_footer {
     }
 
     #desktop_nav button:hover {
-        color: #b1799b;
+        color: #F57b99;
         transition: 0.2s;
     }
 
     #desktop_nav .valgt {
-        color: #b1799b;
+        color: #F57b99;
     }
 
     .burger {
@@ -312,14 +368,38 @@ footer .info_footer {
 
     #showcase_container .logo {
         display: none;
+        cursor: pointer;
     }
 
     #showcase_container .logo2 {
         display: block;
         width: 145px;
         align-self: flex-start;
-        margin: 10px 0 13px 10px
+        margin: 10px 0 13px 10px;
+        cursor: pointer;
     }
+
+    #showcase_container_2 {
+        background: rgba(15, 15, 15, 0.65);
+        width: 100vw;
+        height: 25vw;
+        justify-content: flex-start;
+        font-size: 7em;
+    }
+
+    #showcase_container_2 .logo {
+        display: none;
+        cursor: pointer;
+    }
+
+    #showcase_container_2 .logo2 {
+        display: block;
+        width: 145px;
+        align-self: flex-start;
+        margin: 10px 0 13px 10px;
+        cursor: pointer;
+    }
+
 
 
     /*---------------------SINGLEVIEW MEDIA QUERIES-----------------*/
@@ -366,21 +446,35 @@ footer .info_footer {
         width: 230px;
         margin: 10px 0 15px 10px;
     }
+
+    #showcase_container_2 .logo2 {
+        width: 230px;
+        margin: 10px 0 15px 10px;
+    }
 }
 
 
 @media screen and (min-width:1173px) {
+
+    #showcase {
+        height: 18vw;
+    }
 
     #showcase_container .logo2 {
         width: 240px;
         margin: 10px 0 -2px 10px;
     }
 
-    #showcase {
+    #showcase_container {
         height: 18vw;
     }
 
-    #showcase_container {
+    #showcase_container_2 .logo2 {
+        width: 240px;
+        margin: 10px 0 -2px 10px;
+    }
+
+    #showcase_container_2 {
         height: 18vw;
     }
 }
@@ -389,6 +483,11 @@ footer .info_footer {
 @media screen and (min-width:1600px) {
 
     #showcase_container .logo2 {
+        width: 280px;
+        margin: 10px 0 35px 10px;
+    }
+
+    #showcase_container_2 .logo2 {
         width: 280px;
         margin: 10px 0 35px 10px;
     }
