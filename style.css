@@ -29,6 +29,7 @@ h3 {
     color: #c7c6c6;
     font-size: 1.5em;
     border-radius: 5px;
+    text-decoration: underline white;
 }
 
 #luk:hover {
@@ -66,7 +67,6 @@ h3 {
 
 #showcase_container {
     background: rgba(0, 0, 0, 0.53);
-    width: 100vw;
     height: 30vw;
     color: #fff;
     display: flex;
@@ -85,7 +85,7 @@ h3 {
 
 #showcase_container .logo {
     width: 100px;
-    margin: 0 10px;
+    margin: -18px 10px;
     cursor: auto;
 }
 
@@ -115,7 +115,7 @@ h3 {
 
 #showcase_container_2 .logo {
     width: 100px;
-    margin: 0 10px;
+    margin: -18px 10px;
     cursor: auto;
 }
 
@@ -144,7 +144,7 @@ h3 {
 /*-------------------FOOTER----------------------*/
 
 footer {
-    background-color: #413141ff;
+    background-color: #260f20;
     width: 100%;
     bottom: 0;
 }
@@ -153,7 +153,7 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 
@@ -163,13 +163,11 @@ footer p {
 }
 
 footer .navn_footer {
-    margin: 2.5em;
-
+    margin: 0.5em 2em;
 }
 
 footer .info_footer {
-    margin: 2.5em;
-
+    margin: 0.5em 2em;
 }
 
 .so_me {
@@ -223,7 +221,6 @@ footer .info_footer {
     align-self: flex-start;
     padding-right: 0.3em;
     padding-top: 0.1em;
-    background-color: #000;
     z-index: 2;
 }
 
@@ -329,6 +326,10 @@ footer .info_footer {
         cursor: auto;
     }
 
+    .oversigt {
+        cursor: pointer;
+    }
+
     .oversigt img {
         border-radius: 5px;
     }
@@ -360,7 +361,6 @@ footer .info_footer {
 
     #showcase_container {
         background: rgba(15, 15, 15, 0.65);
-        width: 100vw;
         height: 25vw;
         justify-content: flex-end;
         font-size: 7em;
@@ -400,7 +400,21 @@ footer .info_footer {
         cursor: pointer;
     }
 
+    #footer_div {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
+    footer .navn_footer {
+        margin: 2em;
+    }
+
+    footer .info_footer {
+        margin: 2em;
+    }
 
     /*---------------------SINGLEVIEW MEDIA QUERIES-----------------*/
 
@@ -450,6 +464,10 @@ footer .info_footer {
     #showcase_container_2 .logo2 {
         width: 230px;
         margin: 10px 0 15px 10px;
+    }
+
+    .stil_view p {
+        padding: 0 18vw;
     }
 }
 

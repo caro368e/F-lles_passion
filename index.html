@@ -17,13 +17,17 @@
 
 <body>
 
+    <!-- header med billed, logo og burgermenu -->
     <header id="showcase">
         <div id="showcase_container">
+
+            <!-- burgermenu som er synlig på mobil -->
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
+            <!-- burgermenuens punkter, altså filtreringsknapper -->
             <div id="burger_list" class="hidden nav_links">
                 <button class="filter valgt" data-substil="alle">Alle </button>
                 <button class="filter" data-substil="lolita">Lolita</button>
@@ -32,22 +36,25 @@
                 <button class="filter" data-substil="traditionel">Traditionel</button>
             </div>
 
-
+            <!-- div med to logoer, den ene vises i mobil, mens den anden vises i desktop -->
             <div class="logo_div">
                 <a href="index.html"><img class="logo" src="japan_img/japanlogov2.svg" alt="logo"></a>
-                <a href="index.html"><img class="logo2" src="japan_img/japanlogo.svg" alt="logo"></a>
+                <a href="index.html"><img class="logo2" src="japan_img/japanlogov3.svg" alt="logo"></a>
                 <h1 class="header_overskrift">Japan Street Fashion</h1>
             </div>
 
         </div>
     </header>
 
+
+    <!-- overskrift til filtrering -->
     <div id="kategori_overskrift">
         <div class="kategori_indhold">
             <h1>Alle</h1>
         </div>
     </div>
 
+    <!-- nav med filtreringsknapper som er delt op i kategorier udfra google sheet/json -->
     <nav id="desktop_nav">
         <button class="filter valgt" data-substil="alle">Alle</button>
         <button class="filter" data-substil="lolita">Lolita</button>
@@ -56,22 +63,22 @@
         <button class="filter" data-substil="traditionel">Traditionel</button>
     </nav>
 
+
+    <!-- her indsættes al indhold med hjælp fra script -->
     <section id="data_container"></section>
 
-
+    <!-- skabelonen for vores indhold som viser de enkelte stile i et grid system -->
     <template>
         <article class="oversigt">
             <img src="" alt="">
             <h3 class="navn"></h3>
-            <p class="kategori"></p>
-            <p class="navn"></p>
+            <p class="kort"></p>
             <p class="lang"></p>
             <p class="udseende"></p>
         </article>
     </template>
 
-    <script src="script.js">
-    </script>
+    <!-- footer med oplysninger om os + so-me logoer -->
     <footer>
         <div id="footer_div">
             <div class="navn_footer">
@@ -80,10 +87,15 @@
             <div class="info_footer">
                 <p>2. semester multimedie design<br>KEA - Københavns Erhvervsakademi</p>
             </div>
+
+            <!-- lånt kode fra font awesome som tilføjer logoer af som-me via et link sat i head -->
             <div class="so_me">
                 <i class="fab fa-instagram fa-3x"></i>
                 <i class="fab fa-pinterest-square fa-3x"></i>
             </div>
         </div>
     </footer>
+
+    <script src="script.js">
+    </script>
 </body></html>
