@@ -28,12 +28,13 @@ h3 {
 #luk {
     color: #c7c6c6;
     font-size: 1.5em;
-    border-radius: 5px;
-    text-decoration: underline white;
+    border-radius: none;
+    border-bottom: 1px solid #c7c6c6;
 }
 
 #luk:hover {
     color: #F57b99;
+    border-bottom: 1px solid #F57b99;
 }
 
 .splash_image {
@@ -60,6 +61,7 @@ h3 {
     color: #ffff;
     font-size: 1em;
     margin: 0;
+    padding: 2vw 2vw 4vw 2vw;
 }
 
 #landing_button {
@@ -496,7 +498,7 @@ footer .info_footer {
     }
 
     .stil_view p {
-        padding: 0 15vw;
+        padding: 0 4vw;
     }
 
     .stil_view h3 {
@@ -532,8 +534,8 @@ footer .info_footer {
     }
 
     .landing_text p {
-        padding: 2em 13em;
-        font-size: 1.5em;
+        padding: 2em 7em;
+        font-size: 1.3em;
     }
 
     .landing_logo img {
@@ -564,6 +566,11 @@ footer .info_footer {
 
     #showcase_container_2 {
         height: 18vw;
+    }
+
+    .landing_text p {
+        padding: 2em 13em;
+        font-size: 1.5em;
     }
 }
 
