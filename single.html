@@ -93,9 +93,9 @@
                     detail.querySelector("h3").textContent = stil.gsx$navn.$t;
                     detail.querySelector("img").src = "japan_img/imgs/" + stil.gsx$billede.$t + ".jpg";
                     detail.querySelector("img").alt = "billede af " + stil.gsx$navn.$t;
-                    detail.querySelector(".lang").innerHTML += `<b>Om stilen: <br></b>${stil.gsx$lang.$t}`;
-                    detail.querySelector(".udseende").innerHTML += `<b>Udseendet: <br></b>${stil.gsx$udseende.$t}`;
-                    detail.querySelector(".kultur").innerHTML += `<b>Kultur-sammenhæng: <br></b>${stil.gsx$kultur.$t}`;;
+                    detail.querySelector(".lang").innerHTML += `<b>Historie: <br></b>${stil.gsx$lang.$t}`;
+                    detail.querySelector(".udseende").innerHTML += `<b>Kendetegn: <br></b>${stil.gsx$udseende.$t}`;
+                    detail.querySelector(".kultur").innerHTML += `<b>Kultur: <br></b>${stil.gsx$kultur.$t}`;;
 
                     //denne funktion gør at man kan klikke sig tilbage til den forrige side
                     detail.querySelector("#luk").addEventListener("click", () => {
@@ -104,5 +104,8 @@
                 }
             })
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
