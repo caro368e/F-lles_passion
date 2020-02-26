@@ -37,7 +37,7 @@ h3 {
 }
 
 .splash_image {
-    background-image: url(japan_img/imgs/landing.jpg);
+    background-image: url(japan_img/imgs/landing_img.jpg);
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -58,8 +58,8 @@ h3 {
 
 .landing_text p {
     color: #ffff;
-    padding: 2em 6em;
-    font-size: 1.5em;
+    font-size: 1em;
+    margin: 0;
 }
 
 #landing_button {
@@ -533,6 +533,7 @@ footer .info_footer {
 
     .landing_text p {
         padding: 2em 13em;
+        font-size: 1.5em;
     }
 
     .landing_logo img {
