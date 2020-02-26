@@ -193,6 +193,7 @@ footer {
     width: 100%;
     bottom: 0;
     margin-top: 10vw;
+    padding: 0;
 }
 
 #footer_div {
@@ -217,12 +218,12 @@ footer .info_footer {
 }
 
 .so_me {
-    margin: 1em;
+    margin-bottom: 1em;
     padding: 1em;
 }
 
 .fab {
-    padding: 0.5em;
+    padding: 0.2em;
     color: #bfbfbf;
 }
 
@@ -234,10 +235,12 @@ footer .info_footer {
     margin: 5px;
 }
 
+/* Sørger for at burgermenyen er på 0% a y-aksen så man ikke kan se den*/
 .nav-active {
     transform: translateY(0%);
 }
 
+/* viser hvor filtreringsknapperne til burger menuen skal placered i burgemnuen samt viser burger menuen i forhold til Y-aksen. Denne klasse tilføjes i js*/
 .nav_links {
     position: absolute;
     right: 0v;
@@ -285,6 +288,7 @@ footer .info_footer {
 
 /*---------------- SINGLEVIEW MOBIL ----------------*/
 
+/* viser hvordan siden skal dispplayes i singleview. Denne side skal umiddelbart lukkes ned igen, cha "tilbage" knappen*/
 .stil_view {
     display: flex;
     justify-content: center;
@@ -326,6 +330,8 @@ footer .info_footer {
 
 /*---------------- MEDIA QUERIES ----------------*/
 
+/* der er lavet en masse media queries til siær logoet da det skulle justeres til alle platforme*/
+
 @media screen and (min-width:600px) {
 
     #desktop_nav {
@@ -358,6 +364,8 @@ footer .info_footer {
     .burger {
         display: none;
     }
+
+    /* Sørger for at tingene bliver displayet i et simpelt grid ( 3 artikler hen)*/
 
     #data_container {
         max-width: 1300px;
@@ -396,6 +404,8 @@ footer .info_footer {
     body {
         background-color: #482c38;
     }
+
+    /* vi har lavet et showcase i headeren som viser billedet og ovenpå denne har vi lagt en div med en baggrund som fungere som et "layover". Heri står logo og burger menu*/
 
     #showcase {
         background-image: url(japan_img/header_desktop.jpg);
@@ -577,6 +587,8 @@ footer .info_footer {
 
 
 /*----------------KEYFRAMES--------------------------*/
+
+/* klasse som bliver påsat burgermenuen i Javascript*/
 
 .drop {
     animation-name: drop_kf;
