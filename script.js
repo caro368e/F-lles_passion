@@ -65,7 +65,7 @@ function visStil() {
 
             container.appendChild(klon);
         }
-    })
+    });
 }
 
 
@@ -74,7 +74,7 @@ function visStil() {
 function addListenersToButtons() {
     document.querySelectorAll(".filter").forEach(elm => {
         elm.addEventListener("click", filtrering);
-    })
+    });
 }
 
 //funktion som filtrerer
@@ -83,7 +83,7 @@ function filtrering() {
     document.querySelector(".kategori_indhold h1").textContent = this.textContent;
     document.querySelectorAll(".filter").forEach(elm => {
         elm.classList.remove("valgt");
-    })
+    });
     this.classList.add("valgt");
     visStil();
 }

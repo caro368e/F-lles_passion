@@ -95,17 +95,14 @@
                     detail.querySelector("img").alt = "billede af " + stil.gsx$navn.$t;
                     detail.querySelector(".lang").innerHTML += `<b>Historie: <br></b>${stil.gsx$lang.$t}`;
                     detail.querySelector(".udseende").innerHTML += `<b>Kendetegn: <br></b>${stil.gsx$udseende.$t}`;
-                    detail.querySelector(".kultur").innerHTML += `<b>Kultur: <br></b>${stil.gsx$kultur.$t}`;;
+                    detail.querySelector(".kultur").innerHTML += `<b>Kultur: <br></b>${stil.gsx$kultur.$t}`;
 
                     //denne funktion gør at man kan klikke sig tilbage til den forrige side
                     detail.querySelector("#luk").addEventListener("click", () => {
                         history.back();
                     });
                 }
-            })
+            });
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

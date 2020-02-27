@@ -1,4 +1,4 @@
-//*********** GENERELT ************//
+/*********** GENERELT ************/
 
 * {
     margin: 0;
@@ -28,7 +28,6 @@ h3 {
 #luk {
     color: #c7c6c6;
     font-size: 1.5em;
-    border-radius: none;
     border-bottom: 1px solid #c7c6c6;
 }
 
@@ -245,7 +244,7 @@ footer .info_footer {
 /* viser hvor filtreringsknapperne til burger menuen skal placered i burgemnuen samt viser burger menuen i forhold til Y-aksen. Denne klasse tilføjes i js*/
 .nav_links {
     position: absolute;
-    right: 0v;
+    right: 0;
     height: 60vh;
     top: -2vh;
     background: rgba(15, 15, 15, 0.9);
